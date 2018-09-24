@@ -21,12 +21,13 @@ const styles = StyleSheet.create({
 flex:1,
     marginTop:20,
     justifyContent:'space-between',
-alignItems:'stretch',
+alignItems:'center',
 flexDirection:'row',
 flexWrap:'wrap',
   },
 phoneword:{
   fontSize: 12,
-  color:'#fff'
+  color:'#fff',
+  width:'10%'
 }
 });

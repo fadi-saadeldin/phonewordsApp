@@ -23,7 +23,7 @@ class Landing extends Component {
 }
 
   handleClick(number) {
-    console.log(number);
+
     this.props.phoneChanged(this.props.phone+number);
     this.props.getPhoneWords(this.props.phone+number);
   }
@@ -38,7 +38,8 @@ class Landing extends Component {
 
 
     return (
-      <ScrollView  style={styles.wrapper}>
+      <ScrollView style={styles.main} >
+        <View style={styles.wrapper}>
         <NumberInput
           value={this.props.phone}
           handleChange={this.handleInput}
@@ -52,18 +53,25 @@ class Landing extends Component {
           />
         }
         <Phonewords phonewords={this.props.wordsList} />
+        </View>
       </ScrollView>
     )
   }
 }
 const styles = StyleSheet.create({
   wrapper:{
+   
+    justifyContent: 'center',
+    marginLeft: 20,
+    marginRight: 20,
+    marginTop: 60,
+  },
+  main:{
     backgroundColor:'#000',
   }
 });
 const mapStateToProps =({phonewords})=>{
 const {wordsList,phone,error}=phonewords;
-console.log(wordsList);
 return {wordsList,phone,error};
 
 }

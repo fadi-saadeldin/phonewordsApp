@@ -38,13 +38,13 @@ export default class NumberPad extends Component {
 }
 const styles = StyleSheet.create({
   numberpad:{
-    width: width,
+    width: width-20,
 flex:1,
 justifyContent:'space-between',
 alignItems:'stretch',
 flexDirection:'row',
 flexWrap:'wrap',
     // margin: 0 auto,
-    textAlign: 'center',
+    alignSelf: 'center',
   }
 });
